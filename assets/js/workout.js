@@ -1,4 +1,3 @@
-// function getWorkout(muscle) {
 $('.searchButton').click(function workout() {
     var muscle = $('input').val()
     console.log(muscle)
@@ -9,6 +8,7 @@ $('.searchButton').click(function workout() {
         contentType: 'application/json',
         success: function(result) {
             console.log(result);
+            $('.workoutName').text(result[0].name)
          },
          
         error: function ajaxError(jqXHR) {
