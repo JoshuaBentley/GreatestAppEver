@@ -67,3 +67,41 @@ weight.addEventListener("input", (e) => {
     weight.classList.remove("invalid");
   }
 });
+
+// TDEE CALCULATOR
+// x1.2 Sedentary - little to no exercise
+// x1.375 Lightly Active - light exercise, 1-3 days/wk
+// x 1.55 Moderate - exercise 3-5 days per week
+// x 1.725 Active - hard exercise 6-7 days per week
+// x 1.9 Very Active - very hard exercise and a physical job
+
+// take results from BMR x activity level = TDEE
+
+function calculateTDEE(weight, height, age, gender) {
+  if (tdee == "Sedentary") {
+    return BMR*1.2;
+  } else if (tdee == "Lightly Active") {
+    return BMR*1.375;
+  } else if (tdee == "Moderate") {
+    return BMR*1.55;
+  } else if (tdee == "Active") {
+    return BMR*1.725; 
+  } else if (tdee == "Very Active") {
+    return BMR*1.9;
+  }        
+};
+
+calculateBtn.addEventListener("click", () => {
+  if (age.classList.contains("invalid") || height.classList.contains("invalid") || weight.classList.contains("invalid")) {
+    errorMessage.classList.add("active");
+    return;
+  }
+  
+  var tdeeValue = document.querySelector(".tdee-calculator form input[name='tdee']:checked").value;
+
+  var BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
+
+  calories.innerHTML = BMR.toLocaleString("en-US");
+
+  
+});
