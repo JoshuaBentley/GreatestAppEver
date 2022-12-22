@@ -33,94 +33,43 @@
         </div>
     </section>
 
-    
-<div class="calc-outer-wrap">
-    <div id="form-error" style="display:none;"></div>
-    <form class="calc-form" id="calc-form">
-      <div class="form-fields">
-    
-        <div class="field-outer">
-          <label for="distance" class="top-label">Age:</label>
-          <div class="field-items">
-            <div class="field field-large">         
-              <input type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*">
-            </div><!--  /.field-large -->
-            
-            <div class="field field-medium">
-              <select name="gender">
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-                       
-              </select>
-              
-            </div><!--  /.field-small -->
-          </div><!--  /.field-items -->
-        </div><!--  /.field-outer -->
-    
-        <div class="field-outer">
-          <label for="height" class="top-label">Height:</label>
-          <div class="field-items">
-            <div class="field">
-              <input type="text" name="height_ft" id="height-ft" inputmode="numeric" pattern="[0-9]*">
-              <label for="height-ft">feet</label>
-            </div><!--  /.field -->
-            <div class="field">
-              <input type="text" name="height_in" id="height-in" inputmode="numeric" pattern="[0-9]*">
-              <label for="height-in">inches</label>
-            </div><!--  /.field -->
-           <div class="field">
-              <input type="text" name="height_cm" id="height-cm" inputmode="numeric" pattern="[0-9]*">
-              <label for="height-cm">or centimeters</label>
-            </div><!--  /.field -->        
-          </div><!--  /.field-items -->
-        </div><!--  /.field-outer -->
-    
-        <div class="field-outer">
-          <label for="weight" class="top-label">Your weight:</label>
-          <div class="field-items">
-            <div class="field field-large">
-              <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*">
-            </div><!--  /.field-large -->
-            <div class="field field-small">
-              <select name="weight_unit">
-                <option value="lb">lb</option>
-                <option value="kg">kg</option>
-              </select>
-            </div><!--  /.field-small -->
-          </div><!--  /.field-items -->
-        </div><!--  /.field-outer -->
-       <div class="btn-wrap field-outer">
-        <button class="form-submit">Calculate</button>
-      </div>
-      </div><!--  /.form fields -->
-    
-    
-    </form>
-    <div id="results" style="display:none;"></div>
-    </div><!--  /.calc-outer-wrap -->
-   <!-- <div class="tile is-ancestor">
-        <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child box">
-              <p class="title">BREAKFAST</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-            </div>
-            <div class="tile is-child box">
-              <p class="title">LUNCH</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-            </div>
-          </div>
-        <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child box">
-              <p class="title">DINNER</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
-            </div>
-            <div class="tile is-child box">
-              <p class="title">SNACKS</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+    <div class="bmr-calculator">
+      <h2>BMR calculator</h2>
+      <div class="controls">
+        <form>
+          <h3>Age</h3>
+          <input type="text" id="age" value="28"/>
 
-            </div>            
+          <div class="gender">
+            <h3>Gender</h3>
+            <input type="radio" id="female" value="female" name="gender" checked/>     
+            <label for="female">Female</label>  
+            <input type="radio" id="male" value="male" name="gender"/>     
+            <label for="female">Male</label>              
           </div>
-    </div> -->
+          <div class="height">
+            <h3>Height</h3>  
+            <input type="text" id="height" value="72"/>  
+            <div class="unit">in</div>
+          </div>
+          <div class="weight">
+            <h3>Weight</h3>  
+            <input type="text" id="weight" value="150"/>  
+            <div class="unit">lb</div>
+          </div>
+        </form>
+      </div>
+
+      <div class="result">
+        <button class="calculate-btn">Calculate</button>
+        <div class="result-message">
+          <span class="calories">1,640 </span> calories per day
+        </div>
+
+
+      </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="/assets/js/nutrition.js"></script>
 </body>
