@@ -1,5 +1,5 @@
 html {
-    background-image: url(/img/workout4.png);
+    background-image: url(/img/fit2.png);
     background-size: cover;
 }
 
@@ -8,6 +8,16 @@ html {
     margin-bottom: 2%;
 }
 
-.key {
-    
+.card {
+    background-color: rgba(109, 105, 101, 0.451);
+    color: azure;
+}
+
+.color {
+    color: azure;
+}
+header {
+    color: azure;
+    display: flex;
+    justify-content: space-around;
 }
