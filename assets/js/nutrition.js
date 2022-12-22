@@ -108,7 +108,7 @@ function calculate () {
         }
  
         // Display results
-       showResults(calories);
+       console.log(showResults(calories));
     }
 
     // Add Event Listeners
