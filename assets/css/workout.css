@@ -2,3 +2,12 @@ html {
     background-image: url(/img/workout4.png);
     background-size: cover;
 }
+
+.equipment {
+    font-size: 25px;
+    margin-bottom: 2%;
+}
+
+.key {
+    
+}

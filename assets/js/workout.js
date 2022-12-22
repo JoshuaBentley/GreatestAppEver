@@ -8,7 +8,15 @@ $('.searchButton').click(function workout() {
         contentType: 'application/json',
         success: function(result) {
             console.log(result);
-            $('.workoutName').text(result[0].name)
+            $('.workoutName1').text(result[0].name)
+            $('.equipment1').text("Equipment needed: " + result[0].equipment)
+            $('.instructions1').text(result[0].instructions)
+            $('.workoutName2').text(result[1].name)
+            $('.equipment2').text("Equipment needed: " + result[1].equipment)
+            $('.instructions2').text(result[1].instructions)
+            $('.workoutName3').text(result[2].name)
+            $('.equipment3').text("Equipment needed: " + result[2].equipment)
+            $('.instructions3').text(result[2].instructions)
          },
          
         error: function ajaxError(jqXHR) {
