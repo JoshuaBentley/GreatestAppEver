@@ -6,6 +6,7 @@ const options = {
 	}
 };
 
+
 var showResults = document.querySelector('button')
 showResults.addEventListener('click', getResults)
 
@@ -15,7 +16,7 @@ function getResults(){
     // var age = document.getElementById('age').value;
     var bmr = document.getElementById('bmr');
     fetch('https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial?weight=' + weight + '&height=' + height, options)
-    // fetch('https://bmr-and-tmr.p.rapidapi.com/calculate-bmr?weight=' + weight + '&height=' + height + '&age=' + age + '&sex=male&inImperial=false', options)
+ 
 	.then(response => response.json())
 	.then(response => bmr.innerText = response.bmi + "your BMI")
     .then(response => console.log(response) )
