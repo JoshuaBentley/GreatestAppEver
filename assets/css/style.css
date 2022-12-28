@@ -5,4 +5,6 @@ html {
 
 a {
     color: rgb(72, 215, 24);
+    cursor: grabbing;
+    
 }

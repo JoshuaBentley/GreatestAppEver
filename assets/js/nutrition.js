@@ -20,86 +20,23 @@ function calculateBMR(weight, height, age, gender) {
   }
 };
 
-//Change out of arrow expression 
-calculateBtn.addEventListener("click", () => {
-  if (age.classList.contains("invalid") || height.classList.contains("invalid") || weight.classList.contains("invalid")) {
-    errorMessage.classList.add("active");
-    return;
-  }
-  
-  var genderValue = document.querySelector(".bmr-calculator form input[name='gender']:checked").value;
+var showResults = document.querySelector('button')
+showResults.addEventListener('click', getResults)
 
-  var BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
+function getResults(){
+    var weight = document.getElementById('weight').value;
+    var height = document.getElementById('height').value;
+    // var age = document.getElementById('age').value;
+    var bmr = document.getElementById('bmr');
+    fetch('https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial?weight=' + weight + '&height=' + height, options)
+    // fetch('https://bmr-and-tmr.p.rapidapi.com/calculate-bmr?weight=' + weight + '&height=' + height + '&age=' + age + '&sex=male&inImperial=false', options)
+	.then(response => response.json())
+	.then(response => bmr.innerText = response.bmi + "your BMI")
+    .then(response => console.log(response) )
+	.catch(err => console.error(err));
+   
+}
 
-  calories.innerHTML = BMR.toLocaleString("en-US");
-
-  
-});
-
-// Input validation
-
-age.addEventListener("input", (e) => {
-  var ageValue = e.target.value;
-
-  if (!ageValue || isNaN(ageValue) || ageValue < 10 || ageValue > 100) {
-    age.classList.add("invalid");
-  } else {
-    age.classList.remove("invalid");
-  }
-});
-
-height.addEventListener("input", (e) => {
-  var heightValue = e.target.value;
-
-  if (!heightValue || isNaN(heightValue) || heightValue < 36) {
-    height.classList.add("invalid");
-  } else {
-    height.classList.remove("invalid");
-  }
-});
-
-weight.addEventListener("input", (e) => {
-  var weightValue = e.target.value;
-
-  if (!weightValue || isNaN(weightValue) || weightValue < 80) {
-    weight.classList.add("invalid");
-  } else {
-    weight.classList.remove("invalid");
-  }
-});
-
-// TDEE CALCULATOR
-// x1.2 Sedentary - little to no exercise
-// x1.375 Lightly Active - light exercise, 1-3 days/wk
-// x 1.55 Moderate - exercise 3-5 days per week
-// x 1.725 Active - hard exercise 6-7 days per week
-// x 1.9 Very Active - very hard exercise and a physical job
-
-// take results from BMR x activity level = TDEE
-
-function calculateTDEE(weight, height, age, gender) {
-  if (tdee == "Sedentary") {
-    return BMR*1.2;
-  } else if (tdee == "Lightly Active") {
-    return BMR*1.375;
-  } else if (tdee == "Moderate") {
-    return BMR*1.55;
-  } else if (tdee == "Active") {
-    return BMR*1.725; 
-  } else if (tdee == "Very Active") {
-    return BMR*1.9;
-  }        
-};
-
-calculateBtn.addEventListener("click", () => {
-  if (age.classList.contains("invalid") || height.classList.contains("invalid") || weight.classList.contains("invalid")) {
-    errorMessage.classList.add("active");
-    return;
-  }
-  
-  var tdeeValue = document.querySelector(".tdee-calculator form input[name='tdee']:checked").value;
-
-  var BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
 
   calories.innerHTML = BMR.toLocaleString("en-US");
 

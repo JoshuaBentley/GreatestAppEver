@@ -8,9 +8,9 @@ $('.searchButton').click(function workout() {
         contentType: 'application/json',
         success: function(result) {
             console.log(result);
-            $('.workoutName1').text(result[0].name)
-            $('.equipment1').text("Equipment needed: " + result[0].equipment)
-            $('.instructions1').text(result[0].instructions)
+            $('.workoutName1').text(result[i].name)
+            $('.equipment1').text("Equipment needed: " + result[i].equipment)
+            $('.instructions1').text(result[i].instructions)
             $('.workoutName2').text(result[1].name)
             $('.equipment2').text("Equipment needed: " + result[1].equipment)
             $('.instructions2').text(result[1].instructions)
