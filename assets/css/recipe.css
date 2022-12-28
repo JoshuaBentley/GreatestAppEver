@@ -225,6 +225,15 @@ nav a:hover{
     border: 2px solid gray;
     border-radius: 7px; 
 }
+
+button:hover {
+    cursor: grab;
+}
+
+.key {
+    font-size: 15px;
+}
+
 /* MEDIA QUERIES */
 @media (min-width:600px){
     .row{
