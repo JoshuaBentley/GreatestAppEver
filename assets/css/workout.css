@@ -21,3 +21,16 @@ header {
     display: flex;
     justify-content: space-around;
 }
+
+.bold {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.hide {
+    display: none;
+}
+
+ol {
+    list-style:circle;
+}

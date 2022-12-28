@@ -49,24 +49,37 @@
             <h3>Age</h3>
             <input type="text" id="age" value="28"/>
 
-            <div class="gender">
-              <h3>Gender</h3>
-              <input type="radio" id="female" value="female" name="gender" checked/>     
-              <label for="female">Female</label>  
-              <input type="radio" id="male" value="male" name="gender"/>     
-              <label for="male">Male</label>              
-            </div>
-            <div class="height">
-              <h3>Height</h3>  
-              <input type="text" id="height" value="72"/>  
-              <div class="unit">in</div>
-            </div>
-            <div class="weight">
-              <h3>Weight</h3>  
-              <input type="text" id="weight" value="150"/>  
-              <div class="unit">lb</div>
-            </div>
-          </form>
+    <div class="bmr-calculator">
+      <h2>BMR calculator</h2>
+      <div class="controls">
+        <form>
+          <h3>Age</h3>
+          <input type="text" id="age" value="28"/>
+
+          <div class="gender">
+            <h3>Gender</h3>
+            <input type="radio" id="female" value="female" name="gender" checked/>     
+            <label for="female">Female</label>  
+            <input type="radio" id="male" value="male" name="gender"/>     
+            <label for="female">Male</label>              
+          </div>
+          <div class="height">
+            <h3>Height</h3>  
+            <input type="text" id="height" value="72"/>  
+            <div class="unit">in</div>
+          </div>
+          <div class="weight">
+            <h3>Weight</h3>  
+            <input type="text" id="weight" value="150"/>  
+            <div class="unit">lb</div>
+          </div>
+        </form>
+      </div>
+
+      <div class="result">
+        <button class="calculate-btn">Calculate</button>
+        <div class="result-message">
+          <span class="calories" id="bmr">1,640 </span> calories per day
         </div>
 
         <div class="result">

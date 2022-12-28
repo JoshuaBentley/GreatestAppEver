@@ -17,6 +17,8 @@ $('.searchButton').click(function workout() {
             $('.workoutName3').text(result[2].name)
             $('.equipment3').text("Equipment needed: " + result[2].equipment)
             $('.instructions3').text(result[2].instructions)
+            $('ul').addClass('hide')
+            $('p.bold').addClass('hide')
          },
          
         error: function ajaxError(jqXHR) {
