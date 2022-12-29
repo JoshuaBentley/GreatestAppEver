@@ -1,0 +1,166 @@
+html {
+    background-image: url(/img/calculatorcover.png);
+    background-size: cover;
+}
+
+ h1.title {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+    font-weight: lighter;
+}
+
+
+
+.level {
+ font-family: 'Times New Roman', Times, serif;
+ color: white;
+}
+
+.level a {
+    color: white;
+}
+
+
+.columns {
+    margin-bottom: 1.5rem;
+    position: absolute;
+    top: 30%;
+    left: 130px;
+}
+
+.calculator {
+    max-width:600px;
+    font-family: "Roboto", sans-serif;
+    padding: 8px 24px;
+    box-shadow: 0 4px 8px -3px #777;
+    background-color: rgba(109, 105, 101, 0.451);
+    color: azure;
+}
+
+.calculator * {
+    box-sizing: border-box;
+}
+
+.calculator h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    margin: -8px -24px;
+    margin-bottom: 8px;
+    padding: 16px;
+}
+
+.calculator form h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 16px 0 10px 0;
+}
+
+.calculator form input[type="text"] {
+    width: 100%;
+    padding: 4px 16px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid #d5dbdd;
+}
+
+.calculator form input[type="text"].invalid {
+    border: 1px solid red;
+}
+
+.calculator form {
+    display:flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.calculator form #female {
+  margin-left: 20px;
+}
+
+.calculator form .height,
+.calculator form .weight {
+    position: relative;
+}
+
+.calculator form .unit {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    color: #777;
+}
+
+.calculator .result .calculate-btn {
+    padding: 8px 24px;
+    margin: 16px 0px;
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+.calculator .result {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+.calculator .result .calories {
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+    margin-right: 8px;
+    vertical-align: middle;
+
+}
+
+.calculator .result .error-message {
+    color: pink;
+    font-size: 14px;
+    display: none;
+}
+
+
+/* TDEE CODE */
+.activity-level h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 16px 0 10px 0;
+}
+
+.tdee-calculator .result .calculate-btn {
+    padding: 8px 24px;
+    margin: 16px 0px;
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: uppercase;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+.tdee-calculator .result {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+.tdee-calculator .result .calories {
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+    margin-right: 8px;
+    vertical-align: middle;
+
+}
+
