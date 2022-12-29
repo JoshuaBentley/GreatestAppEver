@@ -1,24 +1,35 @@
 /* GENERAL STYLING */
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap'); */
+:root {
+    --light-gold: #eeead6;
+    --dark-gold: #cdad7d;
+    --grey-back: rgba(109, 105, 101, 0.451);
+    --font-family: 'Montserrat', sans-serif;
+}
+
 *{
     padding: 0;
     margin: 0;
 }
+
+html {
+    background-image: url("/img/recipecover.png");
+    background-size: cover;   
+}
+
 body{
     box-sizing: border-box;
     font-size: 12px;
-    background-color: rgb(230, 224, 216);
     color: rgb(31, 30, 30);
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
 /* NAVIGATION STYLING */
 nav{
-    background-color: rgb(214, 14, 14);
     display: flex;
-    justify-content: space-between;
     padding: 20px;
 }
+
 nav ul{
     list-style-type: none;
 
@@ -28,15 +39,38 @@ nav ul li{
     margin-left: 20px;
 }
 nav a{
-    text-decoration: none;
     color: white;
+    cursor: grabbing;
+    font-family: 'Times New Roman', Times, serif;
+    margin:20px;
+    font-style: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
 }
+
+#nav-bar {
+    justify-content: center;
+}
+
 /* SEARCH INPUT STYLING */
 .recipe-search{
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
+
+input {
+    color: grey;
+}
+
+.searchButton {
+    padding: 20px;
+    color: white;
+    background-color: var(--grey-back);
+    border: none; 
+    letter-spacing: 2px;
+}
+
 .recipe,
 .address {
     padding: 15px;
@@ -44,43 +78,49 @@ nav a{
 }
 .button {
     padding: 10px;
-    background: rgb(214, 14, 14);
     color: white;
     border: none;
 }
 .button:hover{
-    background-color:rgb(245, 66, 66) ;
+    background-color: var(--grey-back);
 }
 /* HEADER STYLING */
-#header{
+#header {
     width: 100%;
     height: 50%;
     text-align: center;
     font-size: 18px;
     position: relative;
-    background-color: rgb(230, 224, 216);
     margin-top: 20px;
     margin-bottom: 30px;
 }
-#header::after{
-    content: "";
-    width: 100%;
-    border-bottom: 1px solid red;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    z-index: 1;
-}
-#header p{
-    background-color: rgb(230, 224, 216);
+
+#header h1 {
     width: auto;
     display: inline-block;
     z-index: 3;
     padding: 0 20px 0 20px;
-    color: black;
     position: relative;
     margin: 0;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;    
 }
+
+/* JR: THIS IS THE NEW NAV BAR */
+#header p{
+    position: relative;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: grabbing;
+    font-family: 'Times New Roman', Times, serif;
+    margin:20px;
+    font-style: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
 /* OTHER DETAILS STYLING */
 .lg-image img{
     height: 300px;
@@ -105,7 +145,7 @@ nav a{
 }
 .main-two {
     padding: 20px;
-    color: black;
+    color: white;
     border-top: 3px solid red;
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,14 +162,14 @@ nav a{
         display: block;
 }
 .main-two span a{
-    color: rgb(209, 43, 43);
+    color: var(--grey-back);
 }
 .blog-section p{
-    color: black;
+    color: white;
 }
 /* FOOD CLASS STYLING */
 .food-recipe {
-    background: rgb(230, 224, 216);
+    background: var(--grey-back);
     display: flex;
     border-bottom: 2px solid red;
     margin-bottom: 20px;
@@ -150,7 +190,7 @@ nav a{
     margin-top: 20px;
 }
 .border-red{
-    background-color: white;
+    background-color: var(--grey-back);
 }
 
 /* FOOTER STYLING */
@@ -195,7 +235,7 @@ h4,
 }
 .social-media a:hover,
 nav a:hover{
-    color: rgb(240, 155, 155);
+    color: grey; 
 }
 .love-span span{
     color: rgb(255, 255, 255);
@@ -208,16 +248,20 @@ nav a:hover{
    grid-gap:1rem;  
 }
 .col{
+    margin-top: 30px;
     border-radius: 5px;
-    color: black;
+    color: white;
     padding: 1rem;
 }
 .col h1{
     font-size: 19px;
 }
+
+/* Card text */
 .col p{
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 18px;
+    font-family: var(--font-family);
 }
 .col img{
     height: 200px;
@@ -226,12 +270,26 @@ nav a:hover{
     border-radius: 7px; 
 }
 
+.col h2 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 button:hover {
     cursor: grab;
 }
 
+
 .key {
-    font-size: 15px;
+    position: relative;
+    font-size: 20px;
+    left: 25px;
+    list-style: none;
+    font-family: var(--font-family);
 }
 
 /* MEDIA QUERIES */

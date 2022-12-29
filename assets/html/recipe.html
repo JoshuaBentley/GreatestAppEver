@@ -4,50 +4,68 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/img/recipeicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); </style>
     <link rel="stylesheet" href="/assets/css/recipe.css">
     <title>Food Recipes</title>
 </head>
 <body>
+    <div id="header">
+        <h1>RECIPES</h1> 
+         <nav class="level" id="nav-bar">
+             <p class="level-item has-text-centered">
+             <a class="link is-info" href="/index.html">HOME</a>
+             </p>    
+             <p class="level-item has-text-centered">
+             <a class="link is-info" href="/assets/html/nutrition.html">CALCULATOR</a>
+             </p>
+             <p class="level-item has-text-centered">
+             <a class="link is-info" href="/assets/html/progress.html">JOURNAL</a>
+             </p>
+             <p class="level-item has-text-centered">
+             <a class="link is-info" href="/assets/html/workout.html">FITNESS</a>
+           </p>
+         </nav>
+    </div>
+
  <!-- Page Navigation-->
-    <nav>
-        <a href="#">Recipes</a>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/assets/html/workout.html">Workouts</a></li>
-            <li><a href="/assets/html/nutrition.html">BMR calculator</a></li>    
-        </ul>
-    </nav>
- <!-- Input and Button Section-->
+
+
+ 
+
+ <!-- Input and Button Section-->    
     <div class="recipe-search">
             <input type="text" class="recipe" placeholder="Find a Recipe....">
             <button class="searchButton">SEARCH</button>    
     </div>
-    <div id="header">
-        <p>Recipes</p> 
-    </div>
+
 <!-- recipe key and introuction to the page-->
     <main>
         <div class="row">
             <div class="col border-red lg-image">
-                <h1>What can I search by?</h1>
-                <p>You can searcch for any dish you would like to make! We will give you the ingredinents and the instructions on how to make that dish. After that all you need to do is Cook, Good luck!</p>
-                <hr>
-                <h2>Key</h2>
-                <ul class="key">
-                    <li>C = cup</li>
-                    <li>lb = pound</li>
-                    <li>g = grams</li>
-                    <li>oz = ounce</li>
-                    <li>tb = table spoon</li>
-                    <li>md = medium</li>
-                    <li>sm = small</li>
-                    <li>pk = pinch</li>
-                </ul>
+                <h2>Search options</h2>
+                <p>You can search for any dish you would like to make! We will give you the ingredients and instructions on how to make that dish. After that all you need to do is cook. Good luck!</p>
+
+                <div class="key-section">
+                  <h2>Key</h2>
+                    <ul class="key">
+                      <li>C = cup</li>
+                      <li>lb = pound</li>
+                      <li>g = grams</li>
+                      <li>oz = ounce</li>
+                      <li>tb = table spoon</li>
+                      <li>md = medium</li>
+                      <li>sm = small</li>
+                      <li>pk = pinch</li>
+                   </ul>                
+                </div>
+                
+
             
             <!-- display recipe and ingredients for the recipe here     -->
             </div>
             <div class="col border-red">
-                <h2 class="dishName">Recipe will show here</h2>
+                <h2 class="dishName">Results</h2>
                 <div class="popular-section">
                     <p class="ingredients">Stop the take out and start dinning in.</p>
                 </div>
@@ -106,9 +124,7 @@
                 <li><a href="#">Instagram</a></li>
             </ul>
         </div>
-        <div class="love-span">
-            <small>Made with <span>❤</span> by Marienoir</small>
-        </div>
+
     </footer> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="/assets/js/recipe.js"></script>
