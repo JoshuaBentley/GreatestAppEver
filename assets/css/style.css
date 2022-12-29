@@ -1,6 +1,7 @@
 :root {
     --light-gold: #eeead6;
     --dark-gold: #cdad7d;
+    --grey-back: rgba(109, 105, 101, 0.451);
 }
 
 html {
@@ -33,9 +34,10 @@ a {
     font-family: 'Times New Roman', Times, serif;
     margin:20px 0px;
     font-style: bold;
+    letter-spacing: 2px;
 }
 
-.container {
+.mission-container {
     color: var(--light-gold);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
@@ -56,6 +58,29 @@ a {
     background-color: var(--dark-gold);
     color:black;
  }
+ /* Description Cards */
+ #info-box {
+    position: absolute;
+    left: 620px;
+    top: 260px;
+    height: 60%;
+    width: 80%;
+ }
+
+ .card {
+    background-color: var(--grey-back);
+ }
+
+ .card h2 {
+    color: white;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+ }
+.card p {
+    color: white;  
+    font-size: 20px;  
+ }
 
 footer {
     position: absolute;
@@ -63,5 +88,12 @@ footer {
     width: 100%;
     color: var(--light-gold);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
     
+}
+
+footer h3 {
+    font-size: 20px;
+    font-style: italic;
+    color: var(--light-gold);
 }
