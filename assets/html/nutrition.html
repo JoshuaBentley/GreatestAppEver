@@ -6,14 +6,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+      </style>
     <title>Nutrition</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
+
 <body>
     <section class="section" style="max-height: 150px;">
         <div class="container">
             <h1 class="title has-text-centered">
-                NUTRITION LOG
+                CALORIE COUNTER
             </h1>
             <div class="level">
                 <p class="level-item subtitle">
@@ -25,13 +32,22 @@
                 <p class="level-item subtitle">
                     <a class="link is-info" href="/assets/html/recipe.html">RECIPES</a>
                 </p>
-
                 <p class="level-item subtitle">
                     <a class="link is-info" href="/assets/html/progress.html">PROGRESS TRACKER</a>
                 </p>
             </div>
         </div>
     </section>
+ <!-- BMR CALCULATOR CODE-->
+   <div class="columns">
+     <div class="column">
+      <div class="bmr-calculator">
+        <h2>BMR Calculator</h2>
+        <p>BMR, or Basal Metabolic Rate, is the number of calories your body uses just to survive! Even if you were to sit on the couch all day long, your body would still use energy to keep your heart pumping, your lungs expanding, etc. Enter your information below to calculate your BMR!</p>
+        <div class="controls">
+          <form>
+            <h3>Age</h3>
+            <input type="text" id="age" value="28"/>
 
     <div class="bmr-calculator">
       <h2>BMR calculator</h2>
@@ -66,9 +82,56 @@
           <span class="calories" id="bmr">1,640 </span> calories per day
         </div>
 
+        <div class="result">
+          <button class="calculate-btn">Calculate</button>
+          <div class="error-message">
+            <p>Please enter information correctly</p>
+          </div>
+          <div class="result-message">
+            <span class="calories">1,640 </span> calories per day
+          </div>
 
+        </div>
+      </div>      
+   </div>
+
+
+ <!-- TDEE CALCULATOR CODE-->
+   <div class="column">
+     <div class="tdee-calculator">
+       <h2>TDEE Calculator</h2>
+       <p>Of course, you probably have to get up and stretch your legs every once and a while. That takes more calories! This is called your Total Daily Energy Expenditure, or TDEE for short. Type your information below and see how many calories you burn a day!</p>
+     <div class="controls">
+      <form>
+        <div class="activity-level">
+          <h3>Activity Level</h3>
+          <select name="tdee" id="activity-level">
+            <option value="sedentary"> Sedentary - little to no exercise</option>
+            <option value="lightly-active"> Lightly Active - light exercise, 1-3 days per week </option>  
+            <option value="moderate"> Moderate - exercise 3-5 days per week </option>
+            <option value="active"> Active - hard exercise 6-7 days per week </option>  
+            <option value="very-active"> Very Active - very hard exercise and a physical job </option>                                     
+          </select>     
+               
+        </div>
+      </form>
+     </div>
+
+     <div class="result">
+      <button class="calculate-btn">Calculate</button>
+      <div class="error-message">
+        <p>Please select an option</p>
       </div>
+      <div class="result-message">
+        <span class="calories">1,640 </span> calories per day
+      </div>
+
+     </div>
     </div>
+  </div>
+
+ </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="/assets/js/nutrition.js"></script>
