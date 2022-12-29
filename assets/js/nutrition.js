@@ -122,11 +122,12 @@ function getResults(){
 	.then(response => bmr.innerText = response.bmi + "your BMI")
     .then(response => console.log(response) )
 	.catch(err => console.error(err));
+	
+	calories.innerHTML = BMR.toLocaleString("en-US");
    
 }
 
 
-  calories.innerHTML = BMR.toLocaleString("en-US");
+
 
   
-}); */
