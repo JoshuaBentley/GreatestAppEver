@@ -4,6 +4,8 @@ var age = document.querySelector(".bmr-calculator form #age");
 var height = document.querySelector(".bmr-calculator form #height");
 var weight = document.querySelector(".bmr-calculator form #weight");
 var errorMessage = document.querySelector(".bmr-calculator .result .error-message");
+var gender = document.getElementsByName('gender');
+var BMR = calculateBMR(weight.value, height.value, age.value, gender.value);
 
 // BMR Calculations based on Harris Benedict Calculator
 // Men -> 66.47 + (6.24 x weight in lb) + (12.7 x height in in.) - (6.75 x age in years)
@@ -29,11 +31,10 @@ calculateBtn.addEventListener("click", () => {
   
   var genderValue = document.querySelector(".bmr-calculator form input[name='gender']:checked").value;
 
-  var BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
+  BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
 
   calories.innerHTML = BMR.toLocaleString("en-US");
-
-  
+  console.log(BMR)
 });
 
 // Input validation
@@ -76,57 +77,46 @@ weight.addEventListener("input", (e) => {
 // x 1.9 Very Active - very hard exercise and a physical job
 
 // take results from BMR x activity level = TDEE
+var tdee = ''
+document.getElementById("activity-level").addEventListener('change', (event) => {
+  console.log(event.target.value)
+  tdee = event.target.value
+})
+// var value = tdee
+var caloriesTDEE = document.querySelector('.caloriesTDEE')
+var tdeeButton = document.querySelector('.tdeeButton')
+tdeeButton.addEventListener('click', calculateTDEE)
 
-function calculateTDEE(weight, height, age, gender) {
-  if (tdee == "Sedentary") {
+
+
+function calculateTDEE() {
+  console.log('click')
+  console.log(tdee)
+  if (tdee === "sedentary") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR * 1.20; 
     return BMR*1.2;
-  } else if (tdee == "Lightly Active") {
+  } else if (tdee == "lightly-active") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR*1.375
     return BMR*1.375;
-  } else if (tdee == "Moderate") {
+  } else if (tdee == "moderate") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR*1.55
     return BMR*1.55;
-  } else if (tdee == "Active") {
+  } else if (tdee == "active") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR*1.725
     return BMR*1.725; 
-  } else if (tdee == "Very Active") {
+  } else if (tdee == "very-active") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR*1.9
     return BMR*1.9;
-  }        
-};
-
-calculateBtn.addEventListener("click", () => {
-  if (age.classList.contains("invalid") || height.classList.contains("invalid") || weight.classList.contains("invalid")) {
-    errorMessage.classList.add("active");
-    return;
   }
-  
-  var tdeeValue = document.querySelector(".tdee-calculator form input[name='tdee']:checked").value;
-
-  var BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
-
-  calories.innerHTML = BMR.toLocaleString("en-US");
-
-  
-});
-
-/* BMI calculator 
-var showResults = document.querySelector('button')
-showResults.addEventListener('click', getResults)
-
-function getResults(){
-    var weight = document.getElementById('weight').value;
-    var height = document.getElementById('height').value;
-    // var age = document.getElementById('age').value;
-    var bmr = document.getElementById('bmr');
-    fetch('https://body-mass-index-bmi-calculator.p.rapidapi.com/imperial?weight=' + weight + '&height=' + height, options)
-    // fetch('https://bmr-and-tmr.p.rapidapi.com/calculate-bmr?weight=' + weight + '&height=' + height + '&age=' + age + '&sex=male&inImperial=false', options)
-	.then(response => response.json())
-	.then(response => bmr.innerText = response.bmi + "your BMI")
-    .then(response => console.log(response) )
-	.catch(err => console.error(err));
-	
-	calories.innerHTML = BMR.toLocaleString("en-US");
-   
-} */
+  };
+ 
 
 
 
 
-  
+

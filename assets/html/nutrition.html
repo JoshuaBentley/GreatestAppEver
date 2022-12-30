@@ -18,11 +18,7 @@
 </head>
 
 <body>
-
-
-
-
-    <section class="section" style="max-height: 150px;">
+    <section class="section header" style="max-height: 150px;">
          <div class="container">
             <h1 class="title has-text-centered">
                 Calorie Calculator
@@ -53,7 +49,7 @@
         <div class="controls">
           <form>
             <h3>Age</h3>
-            <input type="text" id="age" value="28"/>
+            <input type="text" id="age" value=""/>
 
           <div class="gender">
             <h3>Gender</h3>
@@ -64,21 +60,21 @@
           </div>
           <div class="height">
             <h3>Height</h3>  
-            <input type="text" id="height" value="72"/>  
+            <input type="text" id="height" value=""/>  
             <div class="unit">in</div>
           </div>
           <div class="weight">
             <h3>Weight</h3>  
-            <input type="text" id="weight" value="150"/>  
+            <input type="text" id="weight" value=""/>  
             <div class="unit">lb</div>
           </div>
         </form>
       </div>
 
       <div class="result">
-        <button class="calculate-btn">Calculate</button>
+        <button class="calculate-btn caloriesButton">Calculate</button>
         <div class="result-message">
-          <span class="calories" id="bmr">1,640 </span> calories per day
+          <span class="calories" id="bmr">0</span> calories per day
         </div>
 
         </div>
@@ -108,22 +104,22 @@
      </div>
 
      <div class="result">
-      <button class="calculate-btn">Calculate</button>
+      <button class="calculate-btn tdeeButton">Calculate</button>
       <div class="error-message">
         <p>Please select an option</p>
       </div>
       <div class="result-message">
-        <span class="calories">1,640 </span> calories per day
+        <span class="caloriesTDEE">0 </span> calories per day
       </div>
 
      </div>
     </div>
   </div>
 
- </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="/assets/js/nutrition.js"></script>
+ </div>   
 </body>
-</html>
+
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ <script src="/assets/js/nutrition.js"></script>
+
+    </html>
