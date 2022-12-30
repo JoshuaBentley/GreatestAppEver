@@ -1,6 +1,14 @@
+:root {
+    --light-gold: #eeead6;
+    --dark-gold: #cdad7d;
+    --grey-back: rgba(109, 105, 101, 0.451);
+    --font-family: 'Montserrat', sans-serif;
+}
+
 html {
-    background-image: url(/img/fit2.png);
+    background-image: url(/img/fitnesscover.png);
     background-size: cover;
+    margin: 30px;
 }
 
 .equipment {
@@ -16,12 +24,22 @@ html {
 .color {
     color: azure;
 }
+
 header {
     color: azure;
     display: flex;
     justify-content: space-around;
+    transform: uppercase;
 }
 
+span {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    text-transform: uppercase;   
+    font-weight: lighter; 
+    margin: 20px 0;
+}
 .bold {
     font-size: 25px;
     font-weight: 900;
@@ -32,14 +50,46 @@ header {
 }
 
 ol {
-    list-style:circle;
+    list-style:none;
 }
 
 a {
-    color: rgb(20, 218, 218);
-    
+    color: white;
+    cursor: grabbing;
+    font-family: 'Times New Roman', Times, serif;
+    margin:20px 0px;
+    font-style: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
+
+
 
 a:hover {
     cursor: grabbing;
+}
+
+button {
+    padding: 4px 16px;
+    color: white;
+    background-color: var(--grey-back);
+    border: none; 
+    letter-spacing: 2px;
+}
+
+.title {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+#h2 {
+    font-size: 23px;  
+    color: var(--light-gold);
+}
+
+li {
+    margin: 15px;
 }
