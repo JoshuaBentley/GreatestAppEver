@@ -4,7 +4,6 @@ var age = document.querySelector(".bmr-calculator form #age");
 var height = document.querySelector(".bmr-calculator form #height");
 var weight = document.querySelector(".bmr-calculator form #weight");
 var errorMessage = document.querySelector(".bmr-calculator .result .error-message");
-var BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
 
 // BMR Calculations based on Harris Benedict Calculator
 // Men -> 66.47 + (6.24 x weight in lb) + (12.7 x height in in.) - (6.75 x age in years)
@@ -107,8 +106,8 @@ calculateBtn.addEventListener("click", () => {
   
 });
 
-/* BMI calculator */
-/*var showResults = document.querySelector('button')
+/* BMI calculator 
+var showResults = document.querySelector('button')
 showResults.addEventListener('click', getResults)
 
 function getResults(){
@@ -125,7 +124,7 @@ function getResults(){
 	
 	calories.innerHTML = BMR.toLocaleString("en-US");
    
-}
+} */
 
 
 
