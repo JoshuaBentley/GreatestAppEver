@@ -77,35 +77,43 @@ weight.addEventListener("input", (e) => {
 // x 1.9 Very Active - very hard exercise and a physical job
 
 // take results from BMR x activity level = TDEE
-var tdee = document.getElementById('activity-level')
-var value = tdee.value
+var tdee = ''
+document.getElementById("activity-level").addEventListener('change', (event) => {
+  console.log(event.target.value)
+  tdee = event.target.value
+})
+// var value = tdee
 var caloriesTDEE = document.querySelector('.caloriesTDEE')
 var tdeeButton = document.querySelector('.tdeeButton')
 tdeeButton.addEventListener('click', calculateTDEE)
 
+
+
 function calculateTDEE() {
   console.log('click')
-  console.log(value)
-  if (value == "sedentary") {
+  console.log(tdee)
+  if (tdee === "sedentary") {
     console.log('reading')
     caloriesTDEE.innerHTML = BMR * 1.20; 
     return BMR*1.2;
-  } 
+  } else if (tdee == "lightly-active") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR*1.375
+    return BMR*1.375;
+  } else if (tdee == "moderate") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR*1.55
+    return BMR*1.55;
+  } else if (tdee == "active") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR*1.725
+    return BMR*1.725; 
+  } else if (tdee == "very-active") {
+    console.log('reading')
+    caloriesTDEE.innerHTML = BMR*1.9
+    return BMR*1.9;
+  }
   };
-  // else if (tdee == "Lightly Active") {
-  //   caloriesTDEE.innerHTML = BMR*1.375
-  //   return BMR*1.375;
-  // } else if (tdee == "Moderate") {
-  //   caloriesTDEE.innerHTML = BMR*1.55
-  //   return BMR*1.55;
-  // } else if (tdee == "Active") {
-  //   caloriesTDEE.innerHTML = BMR*1.725
-  //   return BMR*1.725; 
-  // } else if (tdee == "Very Active") {
-  //   caloriesTDEE.innerHTML = BMR*1.9
-  //   return BMR*1.9;
-  // }
-
  
 
 
