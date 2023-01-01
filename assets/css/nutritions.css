@@ -1,4 +1,3 @@
-
 html {
     background-image: url(/img/healthyfood.png);
     background-size: cover;
@@ -163,7 +162,8 @@ html {
     margin-right: 8px;
     vertical-align: middle;
 
-}
+} 
+
 @media screen and (max-width: 768px) {
     html {
         background-image: url(/img/recipecover.png) !important;
