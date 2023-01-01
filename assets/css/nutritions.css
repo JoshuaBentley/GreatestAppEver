@@ -1,4 +1,4 @@
-@media screen and (max-width: 1500px) {
+
 html {
     background-image: url(/img/healthyfood.png);
     background-size: cover;
@@ -164,8 +164,7 @@ html {
     vertical-align: middle;
 
 }
-}
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     html {
         background-image: url(/img/recipecover.png) !important;
         background-size: auto;
@@ -336,7 +335,7 @@ html {
     }
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
     html {
         background-image: url(/img/calculatorcover.png) !important;
         background-size:auto;
