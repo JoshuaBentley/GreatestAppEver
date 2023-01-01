@@ -6,6 +6,12 @@ var weight = document.querySelector(".bmr-calculator form #weight");
 var errorMessage = document.querySelector(".bmr-calculator .result .error-message");
 var gender = document.getElementsByName('gender');
 var BMR = calculateBMR(weight.value, height.value, age.value, gender.value);
+calories.innerHTML = localStorage.getItem('BMR')
+age.value = localStorage.getItem('age')
+height.value = localStorage.getItem('height')
+weight.value = localStorage.getItem('weight')
+gender.value = localStorage.getItem('gender')
+
 
 // BMR Calculations based on Harris Benedict Calculator
 // Men -> 66.47 + (6.24 x weight in lb) + (12.7 x height in in.) - (6.75 x age in years)
@@ -14,10 +20,11 @@ var BMR = calculateBMR(weight.value, height.value, age.value, gender.value);
 //BMR CALCULATOR
 function calculateBMR(weight, height, age, gender) {
   if (gender == "male") {
+    localStorage.setItem('gender', gender)
     return (66.47 + (6.24*weight)) + (12.7*height) - (6.75*age);
   }
-
   if (gender == "female") {
+    localStorage.setItem('gender', gender)
     return (655.51 + (4.35*weight)) + (4.7*height) - (4.7*age);
   }
 };
@@ -35,12 +42,14 @@ calculateBtn.addEventListener("click", () => {
 
   calories.innerHTML = BMR.toLocaleString("en-US");
   console.log(BMR)
+  localStorage.setItem('BMR', BMR)
 });
 
 // Input validation
 
 age.addEventListener("input", (e) => {
   var ageValue = e.target.value;
+  localStorage.setItem('age', ageValue)
 
   if (!ageValue || isNaN(ageValue) || ageValue < 10 || ageValue > 100) {
     age.classList.add("invalid");
@@ -51,6 +60,7 @@ age.addEventListener("input", (e) => {
 
 height.addEventListener("input", (e) => {
   var heightValue = e.target.value;
+  localStorage.setItem('height', heightValue)
 
   if (!heightValue || isNaN(heightValue) || heightValue < 36) {
     height.classList.add("invalid");
@@ -61,6 +71,7 @@ height.addEventListener("input", (e) => {
 
 weight.addEventListener("input", (e) => {
   var weightValue = e.target.value;
+  localStorage.setItem('weight', weightValue)
 
   if (!weightValue || isNaN(weightValue) || weightValue < 80) {
     weight.classList.add("invalid");
@@ -86,7 +97,7 @@ document.getElementById("activity-level").addEventListener('change', (event) => 
 var caloriesTDEE = document.querySelector('.caloriesTDEE')
 var tdeeButton = document.querySelector('.tdeeButton')
 tdeeButton.addEventListener('click', calculateTDEE)
-
+caloriesTDEE.innerHTML = localStorage.getItem('BMR')
 
 
 function calculateTDEE() {
@@ -95,22 +106,27 @@ function calculateTDEE() {
   if (tdee === "sedentary") {
     console.log('reading')
     caloriesTDEE.innerHTML = BMR * 1.20; 
+    localStorage.setItem('BMR', BMR)
     return BMR*1.2;
   } else if (tdee == "lightly-active") {
     console.log('reading')
     caloriesTDEE.innerHTML = BMR*1.375
+    localStorage.setItem('age', ageValue)
     return BMR*1.375;
   } else if (tdee == "moderate") {
     console.log('reading')
     caloriesTDEE.innerHTML = BMR*1.55
+    localStorage.setItem('age', ageValue)
     return BMR*1.55;
   } else if (tdee == "active") {
     console.log('reading')
     caloriesTDEE.innerHTML = BMR*1.725
+    localStorage.setItem('age', ageValue)
     return BMR*1.725; 
   } else if (tdee == "very-active") {
     console.log('reading')
     caloriesTDEE.innerHTML = BMR*1.9
+    localStorage.setItem('age', ageValue)
     return BMR*1.9;
   }
   };
