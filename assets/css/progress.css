@@ -1,4 +1,54 @@
+:root {
+    --light-gold: #eeead6;
+    --dark-gold: #cdad7d;
+    --grey-back: rgba(109, 105, 101, 0.451);
+    --font-family: 'Montserrat', sans-serif;
+}
+
 html {
-    background-image: url("/img/ccount1.png");
+    background-image: url("/img/journal.png");
     background-size: cover;
+    margin: 30px;
+}
+
+span {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    text-transform: uppercase;   
+    font-weight: lighter; 
+    margin: 20px 0;
+}
+
+header {
+    color: azure;
+    display: flex;
+    justify-content: space-around;
+    transform: uppercase;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    cursor: grabbing;
+    font-family: 'Times New Roman', Times, serif;
+    margin:20px 0px;
+    font-style: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+a:hover {
+    cursor: grabbing;
+}
+
+.title {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.label {
+    color: white;
 }

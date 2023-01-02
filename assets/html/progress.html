@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <meta charset="UTF-8">
     <link rel="icon" href="/img/calicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/progress.css">
-    <title>Progress Trackerr</title>
+    <title>Progress Tracker</title>
 </head>
+<header>
+    <span>Journal your Progress</span>
+    <p>
+      <a href="/index.html">Home</a>
+    </p>
+    <p>
+      <a href="/assets/html/nutrition.html">BMR Calculator</a>
+    </p>
+    <p>
+      <a href="/assets/html/workout.html">Weight Lifting Guide</a>
+    </p>
+    <p>
+      <a href="/assets/html/recipe.html">Recipes</a>
+    </p>
+  </header>
 <body>
-    <h1>keep it going thangs!</h1>
-    <p>API herer?</p>
+    <div class="field">
+        <label class="label">Progress Tracker</label>
+        <div class="control">
+          <input class="input" id="value" type="text" placeholder="Write down your progress">
+        </div>
+        <div class="control">
+            <button class="button is-info">Submit</button>
+        </div>
+      </div>
+    <h1 class="title is-1">Progress</h1>
+    <ul>
+
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/assets/js/progress.js"></script>
 </body>
 </html>
