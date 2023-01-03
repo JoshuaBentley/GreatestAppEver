@@ -28,7 +28,7 @@ header {
 }
 
 a {
-    color: rgb(0, 0, 0);
+    color: rgb(252, 252, 252);
     cursor: grabbing;
     font-family: 'Times New Roman', Times, serif;
     margin:20px 0px;
@@ -51,4 +51,8 @@ a:hover {
 
 .label {
     color: white;
+}
+
+.consumedCalories {
+    color: azure;
 }
