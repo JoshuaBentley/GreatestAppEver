@@ -8,7 +8,6 @@
 html {
     background-image: url(/img/fitnesscover.png);
     background-size: cover;
-    margin: 30px;
 }
 
 .equipment {
@@ -66,6 +65,7 @@ a {
 
 
 a:hover {
+    color:purple;
     cursor: grabbing;
 }
 
@@ -92,4 +92,212 @@ button {
 
 li {
     margin: 15px;
+}
+
+@media screen and (max-width: 768) {
+    :root {
+        --light-gold: #eeead6;
+        --dark-gold: #cdad7d;
+        --grey-back: rgba(109, 105, 101, 0.451);
+        --font-family: 'Montserrat', sans-serif;
+    }
+    
+    html {
+        background-image: url(/img/fitnesscover.png);
+        background-size: cover;
+    }
+    
+    .equipment {
+        font-size: 20px;
+        margin-bottom: 2%;
+    }
+    
+    .card {
+        background-color: rgba(109, 105, 101, 0.451);
+        color: azure;
+    }
+    
+    .color {
+        color: azure;
+    }
+    
+    header {
+        color: azure;
+        display: flex;
+        justify-content: space-around;
+        transform: uppercase;
+    }
+    
+    span {
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 45px;
+        text-transform: uppercase;   
+        font-weight: lighter; 
+        margin: 15px 0;
+    }
+    .bold {
+        font-size: 25px;
+        font-weight: 900;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    ol {
+        list-style:none;
+    }
+    
+    a {
+        color: white;
+        cursor: grabbing;
+        font-family: 'Times New Roman', Times, serif;
+        margin:20px 0px;
+        font-style: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    a:hover {
+        color:blueviolet;
+        cursor: grabbing;
+    }
+    
+    button {
+        padding: 4px 16px;
+        color: white;
+        background-color: var(--grey-back);
+        border: none; 
+        letter-spacing: 2px;
+    }
+    
+    .title {
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 30px;
+    }
+    
+    #h2 {
+        font-size: 23px;  
+        color: var(--light-gold);
+    }
+    
+    li {
+        margin: 10px;
+    } 
+}
+
+@media  screen and (max-width: 320px) {
+    :root {
+        --light-gold: #eeead6;
+        --dark-gold: #cdad7d;
+        --grey-back: rgba(109, 105, 101, 0.451);
+        --font-family: 'Montserrat', sans-serif;
+    }
+    
+    html {
+        background-image: url(/img/fit2.png);
+        background-size: cover;
+    }
+
+    .equipment1, .equipment2, .equipment3{
+        font-weight: bolder;
+    }
+    
+    .equipment {
+        font-size: 20px;
+        margin-bottom: 2%;
+    }
+    
+    .card {
+        background-color: rgba(109, 105, 101, 0.451);
+        color: azure;
+    }
+    
+    .color {
+        color: azure;
+    }
+    
+    header {
+        color: azure;
+        display: flex;
+        align-items:flex-end;
+        justify-content: space-between;
+        transform: uppercase;
+        
+    }
+    
+    span {
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 45px;
+        display: flex;
+        text-transform: uppercase;   
+        font-weight: lighter; 
+        margin: 15px 0;
+    }
+
+    .link{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin-left: 5%;
+    }
+
+    .bold {
+        font-size: 25px;
+        font-weight: 900;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    ol {
+        list-style:none;
+    }
+    
+    a {
+        color: white;
+        cursor: grabbing;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: bold;
+        padding-left: 3%;
+        font-size: 7px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    a:hover {
+        color: blue;
+        cursor: grabbing;
+    }
+    
+    button {
+        padding: 4px 16px;
+        color: white;
+        background-color: var(--grey-back);
+        border: none; 
+        letter-spacing: 2px;
+    }
+    
+    .title {
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 30px;
+    }
+    
+    #h2 {
+        font-size: 23px;  
+        color: var(--light-gold);
+    }
+    
+    li {
+        margin: 10px;
+    } 
 }
