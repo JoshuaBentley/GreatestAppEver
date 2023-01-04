@@ -5,8 +5,9 @@
 }
 
 html {
-    background-image: url("/img/welcome.png");
+    background-image: url("/img/Welcome.png");
     background-size: cover;
+    background-color: black;
 }
 
 h1 {
